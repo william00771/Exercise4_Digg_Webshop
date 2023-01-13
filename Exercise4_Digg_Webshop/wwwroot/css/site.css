@@ -1,0 +1,29 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    font-family: 'main', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+:root {
+    --blue1: #f0e3fc;
+    --blue2: #82a3d1;
+    --blue3: #191d43;
+    --beige1: #f3dbda;
+    --beige2: #fbd3cc;
+    --beigetext: #b47870;
+    --pink1: #ef9bb3;
+    --pink2: #f3d2f4;
+    --black1: #010101;
+    --buttonhighlight: #181c42;
+    --texthighlight: #6f6e6d;
+}
+
+svg {
+    width: 10px;
+}
