@@ -1,0 +1,35 @@
+﻿@model Product
+
+
+
+
+<div class="productedit_container">
+    <img src="~/Images/Products/@Model.ImageUrl" />
+    <div class="input_container">
+        <label>ImageUrl</label>
+        <input value="@Model.ImageUrl" />
+        <label>Product Name</label>
+        <input value="@Model.ProductName" />
+        <label>Description</label>
+        <textarea value="hello thair" rows="5" cols="60" name="text" style="resize: none;">@Model.ProductDescription</textarea>
+        <label>Category</label>
+        <input value="@Model.ProductCategory" />
+        <label>Rating</label>
+        <input value="@Model.Rating"/>
+        <label>BasePrice</label>
+        <input value="@Model.BasePrice"/>
+        <label>PromotionPrice</label>
+        <input value="@Model.PromotionPrice" />
+    </div>
+    <span>
+        <a asp-controller="Admin" asp-action="EditProducts">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" /></svg>
+            Go back
+        </a>
+        <a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" /></svg>
+            Apply Changes
+        </a>
+    </span>
+</div>
+<div class="editspecificbackground"></div>
