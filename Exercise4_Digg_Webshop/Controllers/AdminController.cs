@@ -20,7 +20,7 @@ namespace Exercise4_Digg_Webshop.Controllers
             return View(products);
         }
 
-        public IActionResult Delete(Guid id)
+        public IActionResult DeleteConfirm(Guid id)
         {
             var product = _context.Products.SingleOrDefault(x => x.Id == id);
             return View(product);
@@ -36,6 +36,19 @@ namespace Exercise4_Digg_Webshop.Controllers
         {
             var product = _context.Products.SingleOrDefault(x => x.Id == id);
             return View(product);
+        }
+
+        public IActionResult Delete(Guid id)
+        {
+            var product = _context.Products.SingleOrDefault(x => x.Id == id);
+            if(product == null)
+            {
+                return View("404 not found");
+            }
+            _context.Products.Remove(product);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(EditProducts));
         }
     }
 }
