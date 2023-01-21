@@ -10,7 +10,7 @@
 
 
 <div style="" class="productsview_mainbackground">
-    <h1 style="position: absolute;">Shop Now!</h1>
+    
 </div>
 <div class="productsview_container" id="productsview_container">
     @foreach (var product in Model)
@@ -37,16 +37,14 @@
                 </div>
             </div>
             <div class="lowersection">
-                
+                <span>
                     <h1>@product.ProductName</h1>
 
                     @{
                         if (product.PromotionPrice != 0)
                         {
-                            <span class="price_container">
-                                <p>@product.PromotionPrice,00 kr</p>
-                                <p class="promotionprice">@product.BasePrice,00 kr</p>
-                            </span>
+                            <p>@product.PromotionPrice,00 kr</p>
+                            <p class="promotionprice">@product.BasePrice,00 kr</p>
                         }
                         else
                         {
@@ -55,7 +53,7 @@
                     }
 
 
-                
+                </span>
                 <div class="rating">
                     @for (int i = 1; i < 6; i++)
                     {

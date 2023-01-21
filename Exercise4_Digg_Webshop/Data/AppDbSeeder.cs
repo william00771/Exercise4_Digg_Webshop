@@ -37,6 +37,7 @@ namespace Exercise4_Digg_Webshop.Data
                             ProductCategory = "shirt",
                             Rating = 5,
                             BasePrice = 449,
+                            PromotionPrice = 339,
                             ImageUrl = "showcase-img-1.png",
                         },
                         new Product()
@@ -55,6 +56,7 @@ namespace Exercise4_Digg_Webshop.Data
                             ProductCategory = "dress",
                             Rating = 4,
                             BasePrice = 799,
+                            PromotionPrice = 599,
                             ImageUrl = "red-dress.png",
                         },
                         new Product()

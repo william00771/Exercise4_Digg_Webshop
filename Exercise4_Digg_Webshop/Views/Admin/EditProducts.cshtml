@@ -1,8 +1,9 @@
 ﻿@model IEnumerable<Product>
 
 <div class="admin_back_btn">
+    <a asp-controller="Home" asp-action="Index">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" /></svg>
-    <a asp-controller="Home" asp-action="Index">Go Back</a>
+        Go Back</a>
 </div>
 <div class="admin_list">
     <table>
@@ -55,6 +56,11 @@
 
 
 <div class="editproducts_background"></div>
+
+<div class="Addnew_btn_container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+        <a asp-controller="Admin" asp-action="Add" class="Addnew_btn">Add New Product</a>
+</div>
 
 
 

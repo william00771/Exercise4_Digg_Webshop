@@ -11,5 +11,10 @@ namespace Exercise4_Digg_Webshop.Data
 
         }
         public DbSet<Product> Products { get; set; }
+
+        internal void SaveChanges(Product product)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
