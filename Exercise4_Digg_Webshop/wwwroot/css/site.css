@@ -2082,3 +2082,17 @@ nav {
             transform: scale(1.2);
             fill: #fff;
         }
+
+
+/*NOT FOUND*/
+.NotFoundBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../Images/Products/error-404.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

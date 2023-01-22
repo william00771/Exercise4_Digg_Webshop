@@ -54,6 +54,10 @@ namespace Exercise4_Digg_Webshop.Controllers
         public IActionResult View(Guid id)
         {
             var product = _service.GetProduct(id);
+            if (product == null)
+            {
+                return View("NotFound");
+            }
             return View(product);
         }
 
