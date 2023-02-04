@@ -1,8 +1,12 @@
 ﻿@using Exercise4_Digg_Webshop.Models
 
-@*How to get all the other models out? = BlogArticle -> Sections -> SectionImageModules -> Images*@
-@model IEnumerable<BlogArticle>
 
+@model IEnumerable<BlogArticle>
+@*How to get all the other models out? = BlogArticle -> Sections -> SectionImageModules -> Images*@
+
+@{
+    ViewData["Title"] = "Blog";
+}
 
 
 <partial name="_Navbar" />
@@ -19,6 +23,9 @@
         <div class="article_container">
             <h2>Placeholder Title</h2>
             <p>Placeholder Description</p>
+            <p>
+
+            </p>
             <div class="imgcontainer">
                 <img src="https://wpthemebooster.com/demo/themeforest/html/benzo/images/blog/post1.jpg" />
                 <img src="https://wpthemebooster.com/demo/themeforest/html/benzo/images/blog/post2.jpg" />

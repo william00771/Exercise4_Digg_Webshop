@@ -2,6 +2,7 @@
 using Exercise4_Digg_Webshop.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Dynamic;
 
 namespace Exercise4_Digg_Webshop.Controllers
 {
