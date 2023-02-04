@@ -56,5 +56,6 @@ app.UseCors(x => x.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 //Seed Database
 AppDbSeeder.SeedProducts(app);
 AppDbSeeder.SeedUsersAndRolesAsync(app).Wait();
+AppDbSeeder.SeedBlog(app);
 
 app.Run();

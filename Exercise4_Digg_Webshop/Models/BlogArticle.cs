@@ -15,6 +15,7 @@ namespace Exercise4_Digg_Webshop.Models
 
         [Required]
         public int Style { get; set; }
+        [Required]
         public ICollection<Section> Sections { get; set; }
     }
 }

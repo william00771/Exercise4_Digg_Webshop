@@ -113,7 +113,7 @@ namespace Exercise4_Digg_Webshop.Data
             }
         }
 
-        /*public static void SeedBlog(IApplicationBuilder applicationBuilder)
+        public static void SeedBlog(IApplicationBuilder applicationBuilder)
         {
             using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
             {
@@ -155,48 +155,12 @@ namespace Exercise4_Digg_Webshop.Data
                         {
                             new SectionImageModule()
                             {
-                                Style = 1,
-                                Images = context.Images.ToList(),
-                            },
-                            new SectionImageModule()
-                            {
-                                Style = 2,
-                                Images = context.Images.ToList(),
-                            },
-                            new SectionImageModule()
-                            {
                                 Style = 3,
-                                Images = context.Images.ToList(),
                             },
-                        });
-                    context.SaveChanges();
-                }
-                if (!context.Sections.Any())
-                {
-                    context.Sections.AddRange(new List<Section>()
-                        {
-                            new Section()
+                            new SectionImageModule()
                             {
-                                BlogArticleId = 1,
-                                SectionImageModuleId = 3,
-                                Title = "God morgon alla solstrålar!",
-                                Description = "Även fast vi är på väg mot ljusare tider, så måste jag säga att det börjar bli riktigt trist att kolla ut genom fönstret, hade verkligen önskat att snön hade lyckats hålla sig kvar åtminstone till julafton, det är alltid lite mysigare då. Men som tur har man all jul belysning som lyser upp hemmet istället. 😍",
                                 Style = 1,
                             },
-                            new Section()
-                            {
-                                BlogArticleId = 1,
-                                Description = "Igår slog jag in lite julklappar till min lilla pälskling också. Han älskar nämligen att öppna paket, det är nog en av dom bästa sakerna han vet. Han blir som ett barn på julafton, helt klart lyrisk av sig, hahaha! Men han är otroligt duktig av sig, han låter julklapparna vara ifred under granen tills han får öppna dom. 😄Idag är också den där dagen då julstädning står på schemat för min del. Man kommer vara som en liten tomtenisse här som yrar och har sig och studsar upp och ner överallt. Gillar att ha ordning och reda runt mig, ett ny städat hem är den bästa känslan. Jag skulle nog inte säga att jag är sådär extremt pedant av mig, men jag kan störa mig så sjukt mycket på att saker står framme som inte ska vara framme. Vill alltid ha det undanplockat överallt, kanske är man pedant ändå, hahaha! 🤦‍♀️ "
-                                Style = 1
-                            },
-                            new Section()
-                            {
-                                BlogArticleId = 2,
-                                SectionImageModuleId = 2,
-                                Title = "Test Title1",
-                                Description = "Test Description",
-                                Style = 2
-                            }
                         });
                     context.SaveChanges();
                 }
@@ -209,18 +173,70 @@ namespace Exercise4_Digg_Webshop.Data
                                 Title = "10 Reasons to change to Leather❤️",
                                 TitleImageUrl = "Leather1.jpg",
                                 Style = 1,
+                                Sections = new List<Section>()
+                                {
+                                    new Section()
+                                    {
+                                        Description = "Igår slog jag in lite julklappar till min lilla pälskling också. Han älskar nämligen att öppna paket, det är nog en av dom bästa sakerna han vet. Han blir som ett barn på julafton, helt klart lyrisk av sig, hahaha! Men han är otroligt duktig av sig, han låter julklapparna vara ifred under granen tills han får öppna dom. 😄Idag är också den där dagen då julstädning står på schemat för min del. Man kommer vara som en liten tomtenisse här som yrar och har sig och studsar upp och ner överallt. Gillar att ha ordning och reda runt mig, ett ny städat hem är den bästa känslan. Jag skulle nog inte säga att jag är sådär extremt pedant av mig, men jag kan störa mig så sjukt mycket på att saker står framme som inte ska vara framme. Vill alltid ha det undanplockat överallt, kanske är man pedant ändå, hahaha! 🤦‍♀️ ",
+                                        Style = 1
+                                    },
+                                    new Section()
+                                    {
+                                        Title = "God morgon alla solstrålar!",
+                                        Description = "Även fast vi är på väg mot ljusare tider, så måste jag säga att det börjar bli riktigt trist att kolla ut genom fönstret, hade verkligen önskat att snön hade lyckats hålla sig kvar åtminstone till julafton, det är alltid lite mysigare då. Men som tur har man all jul belysning som lyser upp hemmet istället. 😍",
+                                        Style = 1,
+                                        SectionImageModuleId = 1,
+                                    }
+                                }
                             },
                             new BlogArticle()
                             {
                                 Title = "5 adventorous moments with Digg",
                                 TitleImageUrl = "Mountain1.jpg",
                                 Style = 2,
+                                Sections = new List<Section>()
+                                {
+                                    new Section()
+                                    {
+                                        Title = "Test Title1",
+                                        Description = "Test Description",
+                                        Style = 2,
+                                        SectionImageModuleId = 2,
+                                    }
+                                }
+                            }
+                        });
+                    context.SaveChanges();
+                }
+                if (!context.ImageModules_Images.Any())
+                {
+                    context.ImageModules_Images.AddRange(new List<ImageModule_Image>()
+                        {
+                            new ImageModule_Image()
+                            {
+                                SectionImageModuleId = 1,
+                                ImageId = 2,
+                            },
+                            new ImageModule_Image()
+                            {
+                                SectionImageModuleId = 1,
+                                ImageId = 3,
+                            },
+                            new ImageModule_Image()
+                            {
+                                SectionImageModuleId = 1,
+                                ImageId = 4,
+                            },
+                            new ImageModule_Image()
+                            {
+                                SectionImageModuleId = 2,
+                                ImageId = 3,
                             }
                         });
                     context.SaveChanges();
                 }
             }
-        }*/
+        }
     }
 
 }

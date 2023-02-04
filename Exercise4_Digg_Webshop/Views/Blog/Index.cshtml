@@ -1,23 +1,24 @@
 ﻿@using Exercise4_Digg_Webshop.Models
 
+@*How to get all the other models out? = BlogArticle -> Sections -> SectionImageModules -> Images*@
+@model IEnumerable<BlogArticle>
+
 
 
 <partial name="_Navbar" />
 <partial name="_Breadcrumb" />
 
-
-<a asp-controller="Blog" asp-action="Edit">Edit</a>
 <div class="blog_container">
     <div class="blog">
         <div class="img">
             <span>
-                <p>July 22nd, 2022, 12:52pm</p>
-                <h1>10 Reasons to change to Leather❤️</h1>
+                <p>-</p>
+                <h1>Placeholder Title</h1>
             </span>
         </div>
         <div class="article_container">
-            <h2>God morgon alla solstrålar!</h2>
-            <p>Även fast vi är på väg mot ljusare tider, så måste jag säga att det börjar bli riktigt trist att kolla ut genom fönstret, hade verkligen önskat att snön hade lyckats hålla sig kvar åtminstone till julafton, det är alltid lite mysigare då. Men som tur har man all jul belysning som lyser upp hemmet istället. 😍</p>
+            <h2>Placeholder Title</h2>
+            <p>Placeholder Description</p>
             <div class="imgcontainer">
                 <img src="https://wpthemebooster.com/demo/themeforest/html/benzo/images/blog/post1.jpg" />
                 <img src="https://wpthemebooster.com/demo/themeforest/html/benzo/images/blog/post2.jpg" />

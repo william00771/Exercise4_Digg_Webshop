@@ -9,9 +9,9 @@ namespace Exercise4_Digg_Webshop.Models
         public int Id { get; set; }
         [Required]
         public int Style { get; set; }
-        
 
-        public ICollection<Image> Images { get; set; }
+
+        public ICollection<ImageModule_Image> ImageModules_Images { get; set; }
 
     }
 }

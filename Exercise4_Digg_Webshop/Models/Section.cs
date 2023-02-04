@@ -12,9 +12,6 @@ namespace Exercise4_Digg_Webshop.Models
 
         [Required]
         public int Style { get; set; }
-
-
-        [Required]
         public BlogArticle BlogArticle { get; set; }
 
         public int? SectionImageModuleId { get; set; }
