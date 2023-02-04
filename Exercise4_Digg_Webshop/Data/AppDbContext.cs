@@ -6,15 +6,11 @@ namespace Exercise4_Digg_Webshop.Data
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
         }
+
         public DbSet<Product> Products { get; set; }
-
-        internal void SaveChanges(Product product)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

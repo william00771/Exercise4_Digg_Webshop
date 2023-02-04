@@ -1,5 +1,7 @@
 ﻿@model Product
 
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
 
 <div class="Addproduct_container">
         <img src="" />
@@ -46,3 +48,5 @@
     </form>
 </div>
 <div class="addspecificbackground"></div>
+
+}

@@ -1,4 +1,5 @@
-﻿
+﻿@using Exercise4_Digg_Webshop.Models.ViewModels;
+@model LoginVM
 
 
 
@@ -8,12 +9,13 @@
     <a asp-controller="Home" asp-action="Index">Go Back</a>
 </div>
 <div class="admin_login_container">
-    <form class="adminform">
+    <form asp-action="Login" class="adminform">
         <h1>Welcome to the Admin View</h1>
         <h1>Log in</h1>
-        <input placeholder="Insert Email here..." type="email"/>
-        <input placeholder="Insert Password here..." type="password" />
-        <button type="button">Login</button>
-        <a style="color: #fff;" asp-controller="Admin" asp-action="EditProducts">PLACEHOLDER LOGIN</a>
+        <input asp-for="EmailAdress" placeholder="Insert Email here..." type="email"/>
+        <span asp-validation-for="EmailAdress" class="text-danger"></span>
+        <input asp-for="Password" placeholder="Insert Password here..." type="password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <button type="submit">Login</button>
     </form>
 </div>

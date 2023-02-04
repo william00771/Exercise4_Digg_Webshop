@@ -1,5 +1,8 @@
 ﻿@model Product
 
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+
 <div class="productview_container">
     <img src="~/Images/Products/@Model.ImageUrl"/>
     <div class="input_container">
@@ -30,3 +33,5 @@
     </span>
 </div>
 <div class="editspecificbackground"></div>
+
+}

@@ -13,8 +13,7 @@ namespace Exercise4_Digg_Webshop.Controllers
 
         public IActionResult Index()
         {
-            var products = _context.Products.ToList();
-            return View(products);
+            return View();
         }
     }
 }

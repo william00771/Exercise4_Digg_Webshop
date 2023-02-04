@@ -1,5 +1,8 @@
 ﻿@model Product
 
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+
 <div class="deleteconfirmation_Container" id="deletecontainer" style="visibility: visible;">
     <div class="deleteconfirmation">
         <h1>Are you sure you want to <span>DELETE</span>?</h1>
@@ -21,3 +24,5 @@
 
     </div>
 </div>
+
+}
